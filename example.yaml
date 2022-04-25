@@ -255,27 +255,18 @@ objects:
     annotations:
     name: quotesdb-claim
   spec:
-  accessModes:
+    accessModes:
     - ReadWriteOnce
-  resources:
-    requests:
-      storage: 300Mi
-  volumeName: pv0024
-  volumeMode: Filesystem
-status:
-  phase: Bound
-  accessModes:
-    - ReadWriteOnce
-    - ReadWriteMany
-    - ReadOnlyMany
-  capacity:
-    storage: 100Gi
+    resources:
+      requests:
+        storage: 300Mi
+    volumeMode: Filesystem
 parameters:
 - name: APP_GIT_URL
   displayName: Application Source Git URL
   description: The Git URL of the application source code
   required: true
-  value: 
+  value: https://github.com/tsrana/php-quotes
 - name: PASSWORD
   displayName: Database Password
   description: Password to access the database
